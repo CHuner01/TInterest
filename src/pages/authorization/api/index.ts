@@ -1,9 +1,11 @@
-import axios from "axios";
-import {API_URL} from "../../../shared/config";
+import {API_URL, apiAxios} from "../../../shared/config";
 
-async function AuthorizeUser(email: string, password: string) {
+async function SendUser(email: string, password: string, url: string) {
     try {
-        const response = await axios.post(API_URL + "/authenticate")
+        const response = await apiAxios.post(url, {
+            "email": email,
+            "password" : password
+        })
         return response.data
     }
     catch (error) {
@@ -12,4 +14,4 @@ async function AuthorizeUser(email: string, password: string) {
     }
 }
 
-export default AuthorizeUser
+export default SendUser

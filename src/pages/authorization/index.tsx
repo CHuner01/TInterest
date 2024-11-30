@@ -1,14 +1,18 @@
-import AuthorizeUser from "./api";
+import SendUser from "./api";
+import {useState} from "react";
+import InputForm from "../../shared/ui/inputForm";
 
 
 function AuthorizationPage() {
 
-    let email: string;
-    let password: string;
+    function Test(email: string, password: string) {
+        console.log(email, password)
+    }
 
-    async function SendUser() {
+    async function AuthorizeUser(email: string, password: string) {
         try {
-            let data = await AuthorizeUser(email, password);
+            let data = await SendUser(email, password, "/authenticate");
+            //записать токены в store
         }
         catch (error) {
             console.log(error)
@@ -17,12 +21,7 @@ function AuthorizationPage() {
 
     return (
         <>
-            <p>Почта</p>
-            <input onChange={(e) => (email = e.target.value)}/>
-            <p>Пароль</p>
-            <input onChange={(e) => (password = e.target.value)}/>
-            <button onClick={() => console.log(email, password)}>Отправить</button>
-
+            <InputForm sendParams={Test} />
         </>
     );
 }
