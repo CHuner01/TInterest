@@ -1,6 +1,6 @@
-import {UserType} from "../../shared/types";
+import {UserInfoType} from "../../shared/types";
 
-export default function User({id, name, bio}: UserType) {
+export default function User({id, name, bio}: UserInfoType) {
 
     return (
         <>

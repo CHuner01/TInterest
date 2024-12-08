@@ -4,8 +4,13 @@ export type TagType = {
     selected: boolean
 }
 
-export type UserType = {
+export type UserInfoType = {
     id: string,
     name: string,
     bio: string
+}
+
+export type UserType = {
+    email: string,
+    password: string
 }

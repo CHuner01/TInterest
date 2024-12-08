@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
-import {UserType} from "../../shared/types";
+import {UserInfoType} from "../../shared/types";
 import {apiAxios} from "../../shared/config";
 import User from "../../entities/user";
 
 
 function MainPage() {
 
-    const [users, setUsers] = useState<UserType[]>([]);
+    const [users, setUsers] = useState<UserInfoType[]>([]);
 
     useEffect(() => {
         getSameUsers();

@@ -1,7 +1,7 @@
-import {apiAxios} from "../../shared/config";
+import {apiAxios} from "../shared/config";
 import {useEffect, useState} from "react";
-import Tag from "../../entities/tag";
-import {TagType} from "../../shared/types";
+import Tag from "../entities/tag";
+import {TagType} from "../shared/types";
 
 function GetInterests() {
 
