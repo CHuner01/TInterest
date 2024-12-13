@@ -14,3 +14,8 @@ export type UserType = {
     email: string,
     password: string
 }
+
+export type TokensType = {
+    accessToken: string,
+    refreshToken: string
+}

@@ -2,7 +2,7 @@ import InputForm from "../../shared/ui/inputForm";
 import {API_URL, apiAxios} from "../../shared/config";
 import {FieldValues, useForm} from "react-hook-form";
 import {UserType} from "../../shared/types";
-import {authorizeUser} from "../../shared/lib/store/reducers/ActionCreators";
+import {authorizeUser} from "../Authorization/reducers/ActionCreators";
 
 function RegistrationPage() {
     const {

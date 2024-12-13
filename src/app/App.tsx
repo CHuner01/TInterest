@@ -6,8 +6,8 @@ import MainPage from "../pages/Main";
 function App() {
   return (
     <>
-      <AuthorizationPage />
-      {/*  <MainPage />*/}
+      {/*<AuthorizationPage />*/}
+        <MainPage />
     </>
   );
 }

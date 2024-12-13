@@ -1,14 +1,14 @@
-import SendUser from "./api";
+
 import {FieldValues, useForm} from "react-hook-form";
-import {useAppDispatch, useAppSelector} from "../../shared/lib/hooks/redux";
-import {authorizeUser} from "../../shared/lib/store/reducers/ActionCreators";
+import {useAppDispatch, useAppSelector} from "../../shared/model/hooks/redux";
+
 import {UserType} from "../../shared/types";
 
 
 function AuthorizationPage() {
     const dispatch = useAppDispatch();
-    const {user, isLoading, error} =
-        useAppSelector(state => state.userReducer)
+
+
     const {
         register,
         handleSubmit,
@@ -23,23 +23,13 @@ function AuthorizationPage() {
             email: data.email,
             password: data.password
         }
-        dispatch(authorizeUser(newUser))
+
     }
 
 
 
     function Test(email: string, password: string) {
         console.log(email, password)
-    }
-
-    async function AuthorizeUser(email: string, password: string) {
-        try {
-            let data = await SendUser(email, password, "/authenticate");
-            //записать токены в store
-        }
-        catch (error) {
-            console.log(error)
-        }
     }
 
     return (

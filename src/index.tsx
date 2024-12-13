@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './app/App';
-import {setupStore} from "./shared/lib/store/store";
+import {setupStore} from "./shared/model/store/store";
 import {Provider} from "react-redux";
 
 const store = setupStore();
