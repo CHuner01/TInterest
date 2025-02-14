@@ -1,10 +1,10 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 
-import {usersAPI} from "../../../widgets/user-list/api/UserService";
-import {authAPI} from "../../../pages/Authorization/authApi";
-import {registerAPI} from "../../../pages/Registration/registerApi";
-import {userAPI} from "../../../pages/Profile/userApi";
-import {tagsAPI} from "../../api/tagsApi";
+import {usersAPI} from "../widgets/user-list/usersApi";
+import {authAPI} from "../pages/Authorization/authApi";
+import {registerAPI} from "../pages/Registration/registerApi";
+import {userAPI} from "../pages/Profile/userApi";
+import {tagsAPI} from "./api/tagsApi";
 
 const rootReducer = combineReducers({
     [usersAPI.reducerPath]: usersAPI.reducer,

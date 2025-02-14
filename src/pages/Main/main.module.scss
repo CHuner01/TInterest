@@ -1,0 +1,54 @@
+.container {
+    background-color: #f6f7f9;
+    display: flex;
+    justify-content: center;
+    padding: 40px 50px;
+    min-height: 72vh;
+}
+
+.list {
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+
+}
+
+.input {
+    border-radius: 10px;
+    border: 1px;
+    //color: #8e8f91;
+    color: #383838;
+
+    padding-right: 48px;
+    padding-left: 48px;
+    font-size: 19px;
+    height: 42px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+
+    background:  url("../../app/icons/SearchIcon.png") no-repeat 10px center,
+    #f6f7f9   url("../../app/icons/FilterIcon.png") no-repeat calc(100% - 10px) center;
+
+    margin-bottom: 35px;
+}
+
+.input::placeholder {
+    color: #8e8f91;
+}
+
+.input:focus {
+    outline: none;
+    //box-shadow: none;
+}

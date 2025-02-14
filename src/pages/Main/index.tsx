@@ -1,9 +1,10 @@
-import {useEffect, useState} from "react";
-import {UserInfoType} from "../../shared/types";
-import {apiAxios} from "../../shared/config";
-import User from "../../entities/user";
-import {usersAPI} from "../../widgets/user-list/api/UserService";
+
+import styles from "./main.module.scss"
+import Navbar from "../../widgets/navbar";
+import Footer from "../../widgets/footer";
 import UserList from "../../widgets/user-list";
+import SearchIcon from "../../app/icons/SearchIcon.png"
+import LKIcon from "../../app/icons/LKIcon.png";
 
 
 function MainPage() {
@@ -11,11 +12,18 @@ function MainPage() {
 
     return (
         <>
-            <button>Выйти</button>
-            <button>В профиль</button>
-            <button>В чаты</button>
+            <Navbar />
 
-            <UserList />
+            <div className={styles.container}>
+                <div className={styles.list}>
+                    <input placeholder="Введите запрос" className={styles.input}/>
+                    <UserList />
+                </div>
+            </div>
+
+            <Footer />
+
+
         </>
     );
 }

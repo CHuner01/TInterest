@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 970px;
+    min-width: 250px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+}
+
+.titleT {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    color: #ffd600;
+    font-size: 27px;
+    margin: 0;
+}
+
+.titleIntererst {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    color: #383838;
+    font-size: 27px;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px
+}
+

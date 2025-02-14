@@ -1,10 +1,15 @@
-import InputForm from "../../shared/ui/inputForm";
-import {API_URL, apiAxios} from "../../shared/config";
+
+
 import {FieldValues, useForm} from "react-hook-form";
-import {UserType} from "../../shared/types";
-import {authorizeUser} from "../Authorization/reducers/ActionCreators";
+import styles from "./register.module.scss"
+import {registerAPI} from "./registerApi";
+
+
 
 function RegistrationPage() {
+
+    const [authorizeUser, {}] = registerAPI.useAuthorizeUserMutation()
+
     const {
         register,
         handleSubmit,
@@ -17,68 +22,61 @@ function RegistrationPage() {
         console.log(data)
     }
 
-    function Test(email: string, password: string) {
-        console.log(email, password)
-    }
-
-    function RegisterUser(email: string, password: string, url: string) {
-        apiAxios.post(url, {
-            "email": email,
-            "password" : password
-        })
-            .then(function (response) {
-                console.log(response);
-                //записать токены в store
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
-    }
 
     return (
-        <>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={styles.container}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+                <p className={styles.title}>Личная информация</p>
                 <input
                     {...register("city", {
                         required: "error",
                     })}
-                    placeholder="Город"
+                    placeholder="Город*"
+                    className={styles.input}
                 />
                 <input
                     {...register("surname", {
                         required: "error",
                     })}
-                    placeholder="Фамилия"
+                    placeholder="Фамилия*"
+                    className={styles.input}
                 />
                 <input
                     {...register("name", {
                         required: "error",
                     })}
-                    placeholder="Имя"
+                    placeholder="Имя*"
+                    className={styles.input}
                 />
                 <input
                     {...register("email", {
                         required: "error",
                     })}
-                    placeholder="Почта"
+                    placeholder="Электронная почта*"
+                    className={styles.input}
                 />
                 <input
                     {...register("password", {
                         required: "error",
                     })}
                     //type="password"
-                    placeholder="Пароль"
+                    placeholder="Пароль*"
+                    className={styles.input}
                 />
                 <input
                     {...register("confirmPassword", {
                         required: "error",
                     })}
                     //type="password"
-                    placeholder="Повторите пароль"
+                    placeholder="Повторите пароль*"
+                    className={styles.input}
                 />
-                <button>Отправить</button>
+                <div className={styles.footer}>
+                    <button className={styles.button} onClick={() => {console.log("кнопка")}}>Следующая</button>
+                </div>
+
             </form>
-        </>
+        </div>
     );
 }
 

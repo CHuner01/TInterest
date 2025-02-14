@@ -1,4 +1,4 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {fakeApi} from "../../shared/config";
 import {UserInfoType} from "../../shared/types";
 export const userAPI = createApi({

@@ -1,13 +1,12 @@
-
 import {FieldValues, useForm} from "react-hook-form";
-import {useAppDispatch, useAppSelector} from "../../shared/model/hooks/redux";
-
 import {UserType} from "../../shared/types";
-
+import styles from "./style.module.scss"
+import {authAPI} from "./authApi";
 
 function AuthorizationPage() {
-    const dispatch = useAppDispatch();
 
+    const [authorizeUser, {isLoading, error}] =
+        authAPI.useAuthorizeUserMutation()
 
     const {
         register,
@@ -23,17 +22,12 @@ function AuthorizationPage() {
             email: data.email,
             password: data.password
         }
-
-    }
-
-
-
-    function Test(email: string, password: string) {
-        console.log(email, password)
+        await authorizeUser(newUser)
     }
 
     return (
         <>
+            <p className={styles.btn}>Текст</p>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input
                     {...register("email", {

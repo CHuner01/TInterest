@@ -1,0 +1,25 @@
+/*@import-normalize;*/
+
+
+@font-face {
+    font-family: 'MyFont';
+    src: url("../public/fonts/HelveticaNeue.otf") format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url("../public/fonts/HelveticaNeue-Roman.otf") format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+}
+
+::selection {
+    background-color: #ffdb67; /* Жёлтый фон */
+    color: #000; /* Чёрный текст */
+}

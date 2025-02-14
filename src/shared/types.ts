@@ -5,8 +5,11 @@ export type TagType = {
 }
 
 export type UserInfoType = {
-    id: string,
+    id: number,
     name: string,
+    city: string,
+    position: string,
+    tags: string[],
     bio: string
 }
 
@@ -18,4 +21,12 @@ export type UserType = {
 export type TokensType = {
     accessToken: string,
     refreshToken: string
+}
+
+export type ChatIconType = {
+    name: string,
+    text: string,
+    time: string,
+    user: boolean,
+    unread: boolean
 }
