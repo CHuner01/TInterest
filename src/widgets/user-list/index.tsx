@@ -42,10 +42,10 @@ function UserList() {
                     <User
                         key={user.id}
                         id={user.id}
-                        name={user.name}
+                        name={user.firstName + " " + user.lastName}
                         city={user.city}
-                        position={user.position}
-                        tags={user.tags}
+                        position={user.teamPosition}
+                        // tags={user.tags}
                         bio={user.bio}
                     />
                 </>

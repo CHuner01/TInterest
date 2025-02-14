@@ -9,7 +9,7 @@ export type UserInfoType = {
     name: string,
     city: string,
     position: string,
-    tags: string[],
+    // tags: string[],
     bio: string
 }
 

@@ -22,8 +22,6 @@ function MainPage() {
             </div>
 
             <Footer />
-
-
         </>
     );
 }

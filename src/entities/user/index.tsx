@@ -1,8 +1,12 @@
 import {UserInfoType} from "../../shared/types";
 import styles from "./user.module.scss"
 import TagList from "../../widgets/tag-list";
+import {usersAPI} from "../../widgets/user-list/usersApi";
 
-export default function User({id, name, city, position, tags, bio}: UserInfoType) {
+export default function User({id, name, city, position, bio}: UserInfoType) {
+
+    const {data: tags, error, isLoading} =
+        usersAPI.useGetUserTagsQuery(id)
 
     return (
         <div className={styles.container}>
@@ -10,7 +14,7 @@ export default function User({id, name, city, position, tags, bio}: UserInfoType
             <div className={styles.info}>
                 <p className={styles.name}>{name}</p>
                 <p className={styles.city}>г.{city}, {position}</p>
-                <TagList tags={tags}/>
+                {tags && <TagList tags={tags}/>}
                 <p className={styles.bio}>{bio}</p>
             </div>
         </div>
