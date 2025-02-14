@@ -1,12 +1,31 @@
 
+:root {
+    --bg-white-light: #f6f7f9;
+    --bg-input-light: #f6f7f9;
+    --bg-gray-light: #383838;
+    --bg-placeholder-light: #8e8f91;
+
+    --bg-white-dark: #111111;
+    --bg-input-dark: #282828;
+    --bg-gray-dark: #616161;
+    --bg-placeholder-dark: #616161;
+}
+
+[data-theme="dark"] {
+    --bg-white-light: var(--bg-white-dark);
+    --bg-input-light: var(--bg-input-dark);
+    --bg-gray-light: var(--bg-gray-dark);
+    --bg-placeholder-light: var(--bg-placeholder-dark);
+}
+
 .input {
     font-family: 'MyFont', sans-serif;
     font-weight: 300;
     border-radius: 10px;
     border: 1px;
-    background-color: #f6f7f9;
+    background-color: var(--bg-input-light);
     //color: #8e8f91;
-    color: #383838;
+    color: var(--bg-gray-light);
     padding-right: 18px;
     padding-left: 18px;
     font-size: 15px;
@@ -15,7 +34,7 @@
 }
 
 .input::placeholder {
-    color: #8e8f91;
+    color: var(--bg-placeholder-light);
 }
 
 .input:focus {
@@ -27,8 +46,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 95vh;
     padding: 20px;
+    background-color: var(--bg-white-light);
 }
 
 .form {
@@ -56,7 +76,7 @@
 .title {
     font-family: 'MyFont', sans-serif;
     font-weight: 500;
-    color: #383838;
+    color: var(--bg-gray-light);
     margin: 10px 0;
     font-size: 27px;
     display: flex;

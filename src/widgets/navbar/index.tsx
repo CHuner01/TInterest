@@ -1,7 +1,7 @@
 import LKIcon from "../../app/icons/LKIcon.png";
 import MsgIcon from "../../app/icons/MsgIcon.png";
 import styles from "./navbar.module.scss"
-
+import { Link } from "react-router-dom";
 
 function Navbar() {
 
@@ -14,8 +14,12 @@ function Navbar() {
                         <p className={styles.titleIntererst}>Interest</p>
                     </div>
                     <div className={styles.icons}>
-                        <img src={LKIcon} alt="Icon" width={30} height={30} />
-                        <img src={MsgIcon} alt="Icon" width={30} height={30} />
+                        <Link to="/profile">
+                            <img src={LKIcon} alt="Icon" width={30} height={30} />
+                        </Link>
+                        <Link to="/chats">
+                            <img src={MsgIcon} alt="Icon" width={30} height={30} />
+                        </Link>
                     </div>
                 </div>
             </nav>

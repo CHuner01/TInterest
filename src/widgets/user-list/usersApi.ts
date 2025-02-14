@@ -6,12 +6,12 @@ import {UserInfoType} from "../../shared/types";
 export const usersAPI = createApi({
     reducerPath: 'usersAPI',
     baseQuery: fetchBaseQuery({
-        //baseUrl: API_URL
+        baseUrl: API_URL
     }),
     endpoints: (build) => ({
         getSameUsers: build.query<UserInfoType[], void>({
             query: () => ({
-                url: fakeApi
+                url: "/users/all"
             })
         })
     })

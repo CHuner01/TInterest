@@ -4,39 +4,36 @@ import {UserInfoType} from "../../shared/types";
 import styles from "./userList.module.scss"
 
 function UserList() {
-    // const { data: users, error, isLoading } =
-    //     usersAPI.useGetSameUsersQuery()
+    const { data: users, error, isLoading } =
+        usersAPI.useGetSameUsersQuery()
 
-    const users: UserInfoType[] = [{
-        id: 0,
-        name: "Никита Чел",
-        city: "Томск",
-        position: "Крутой менеджер",
-        tags: ["сериалы", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме",
-            "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме", "аниме"],
-        bio: "текст текст текст текст текст текст текст текст текст текст текст текст" +
-            "текст текст текст текст текст текст текст текст текст текст текст текст" +
-            "текст текст текст текст текст текст текст текст текст текст текст текст" +
-            "текст текст текст текст текст текст текст текст текст текст текст текст" + "Lorem ipsum dolor sit amet, " +
-            "consectetur adipisicing elit. Accusantium at autem cumque dolor dolores dolorum eaque earum eum impedit " +
-            "iste minus modi molestias natus, omnis perspiciatis possimus quaerat similique. Perspiciatis.\n"
-        },
-        {
-            id: 1,
-            name: "Никита Чел",
-            city: "Томск",
-            position: "Крутой менеджер",
-            tags: ["сериалы", "аниме"],
-            bio: "текст текст текст"
-        },
-        {
-            id: 2,
-            name: "Никита Чел",
-            city: "Томск",
-            position: "Крутой менеджер",
-            tags: ["сериалы", "аниме"],
-            bio: "текст текст текст"
-        }]
+    console.log(users)
+
+    // const users: UserInfoType[] = [
+    //     {
+    //         id: 0,
+    //         name: "Никита Кузляев",
+    //         city: "Томск",
+    //         position: "Project manager",
+    //         tags: ["вязание", "программирование", "спорт", "музыка", "робототехника"],
+    //         bio: "Сложнее всего начать действовать, все остальное зависит только от упорства."
+    //     },
+    //     {
+    //         id: 1,
+    //         name: "Дмитрий Ни",
+    //         city: "Томск",
+    //         position: "Backend разработчик",
+    //         tags: ["робототехника", "рисование", "аниме", "игры"],
+    //         bio: "Логика может привести Вас от пункта А к пункту Б, а воображение — куда угодно."
+    //     },
+    //     {
+    //         id: 2,
+    //         name: "Александра Ланшакова",
+    //         city: "Томск",
+    //         position: "Дизайнер",
+    //         tags: ["игры", "книги", "фильмы", "рисование"],
+    //         bio: "Вы никогда не пересечете океан, если не наберетесь мужества потерять берег из виду."
+    //     }]
 
     return (
         <div className={styles.container}>

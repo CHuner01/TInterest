@@ -3,12 +3,14 @@
 import {FieldValues, useForm} from "react-hook-form";
 import styles from "./register.module.scss"
 import {registerAPI} from "./registerApi";
-
+import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 
 function RegistrationPage() {
 
     const [authorizeUser, {}] = registerAPI.useAuthorizeUserMutation()
+    const navigate = useNavigate();
 
     const {
         register,
@@ -20,6 +22,7 @@ function RegistrationPage() {
 
     const onSubmit = async (data: FieldValues) => {
         console.log(data)
+        navigate("/main")
     }
 
 
@@ -66,13 +69,19 @@ function RegistrationPage() {
                 <input
                     {...register("confirmPassword", {
                         required: "error",
+                        validate: (value) =>
+                            value === getValues("password") || "Пароли должны совпадать",
                     })}
                     //type="password"
                     placeholder="Повторите пароль*"
                     className={styles.input}
                 />
                 <div className={styles.footer}>
-                    <button className={styles.button} onClick={() => {console.log("кнопка")}}>Следующая</button>
+                    <button className={styles.button}
+
+                            disabled={isSubmitting}
+                            type="submit"
+                    >Продолжить</button>
                 </div>
 
             </form>
