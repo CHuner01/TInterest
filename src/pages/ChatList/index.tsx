@@ -4,6 +4,7 @@ import styles from "./chatList.module.scss"
 import User from "../../entities/user";
 import {ChatIconType} from "../../shared/types";
 import ChatIcon from "../../entities/chatIcon";
+import {Link} from "react-router-dom";
 
 type ChatListType = {
     chats: ChatIconType[];
@@ -13,6 +14,7 @@ function ChatList() {
 
     const chats: ChatIconType[] = [
         {
+            id:0,
             name:"Котики",
             text:"Пошли пить молоко",
             time:"30м",
@@ -20,6 +22,7 @@ function ChatList() {
             unread: true,
         },
         {
+            id: 1,
             name:"Котики",
             text:"Пошли пить молоко",
             time:"30м",
@@ -34,13 +37,17 @@ function ChatList() {
             <div className={styles.container}>
                 <div className={styles.list}>
                     {chats.map((chat) => (
-                        <ChatIcon
-                            name={chat.name}
-                            text={chat.text}
-                            time={chat.time}
-                            user={chat.user}
-                            unread={chat.unread}
-                        />
+                        <Link key={chat.id} to={`/chats/${chat.id}`} className={styles.link} >
+                            <ChatIcon
+                                key={chat.id}
+                                id={chat.id}
+                                name={chat.name}
+                                text={chat.text}
+                                time={chat.time}
+                                user={chat.user}
+                                unread={chat.unread}
+                            />
+                        </Link>
                     ))}
                 </div>
             </div>

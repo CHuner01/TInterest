@@ -1,8 +1,11 @@
 import {ChatIconType} from "../../shared/types";
 import styles from "./chatIcon.module.scss"
+import {Link} from "react-router-dom/dist";
+import LKIcon from "../../app/icons/LKIcon.png";
 
-function Chat({name, text, time, user, unread}: ChatIconType) {
+function Chat({id, name, text, time, user, unread}: ChatIconType) {
     return (
+
         <div className={styles.container}>
             <div className={styles.chatPhoto}></div>
             <div className={styles.info}>
@@ -15,6 +18,7 @@ function Chat({name, text, time, user, unread}: ChatIconType) {
             </div>
             <div className={styles.dot}></div>
         </div>
+
     );
 }
 

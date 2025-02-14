@@ -24,9 +24,16 @@ export type TokensType = {
 }
 
 export type ChatIconType = {
+    id: number,
     name: string,
     text: string,
     time: string,
     user: boolean,
     unread: boolean
+}
+
+export type MessageType = {
+    name: string,
+    text: string,
+    time: string
 }

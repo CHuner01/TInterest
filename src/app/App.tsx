@@ -7,6 +7,7 @@ import {ChatIconType} from "../shared/types";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import StubPage from "../pages/Stub";
 import ProfilePage from "../pages/Profile";
+import Chat from "../pages/Chat";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
                     <Route path="/register" element={<RegistrationPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/chats" element={<ChatList />} />
+                    <Route path="/chats/:id" element={<Chat />} />
                 </Routes>
             </Router>
         </>

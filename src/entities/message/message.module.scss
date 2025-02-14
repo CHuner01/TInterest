@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.photo {
+    width: 50px;
+    height: 50px;
+    background-color: #ffd600;
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    font-size: 27px;
+    color: white;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 5px;
+}
+
+.name {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #49494b;
+}
+
+.text {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #49494b;
+}
+
+.time {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    color: #49494b;
+    margin-left: auto;
+}
