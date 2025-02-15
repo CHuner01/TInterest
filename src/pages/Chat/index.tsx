@@ -90,9 +90,7 @@ function Chat() {
             <Navbar />
             <div className={styles.container}>
                 <div className={styles.list}>
-                    <div className={styles.chatNavbar}>
-                        Название
-                    </div>
+
                     <div className={styles.chatBox} ref={chatRef}>
                         {messages && messages.map((msg) => (
                             <>

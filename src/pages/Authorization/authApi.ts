@@ -10,7 +10,7 @@ export const authAPI = createApi({
     endpoints: (build) => ({
         authorizeUser: build.mutation<TokensType, UserType>({
             query: (user) => ({
-                url: "auth",
+                url: "/auth/login",
                 method: 'POST',
                 body: user
             })

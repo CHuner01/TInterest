@@ -16,7 +16,7 @@ function MainPage() {
 
             <div className={styles.container}>
                 <div className={styles.list}>
-                    <input placeholder="Введите запрос" className={styles.input}/>
+                    <input placeholder="Введите запрос" className={styles.input} disabled={true}/>
                     <UserList />
                 </div>
             </div>

@@ -14,7 +14,7 @@ export default function User({id, name, city, position, bio}: UserInfoType) {
             <div className={styles.info}>
                 <p className={styles.name}>{name}</p>
                 <p className={styles.city}>г.{city}, {position}</p>
-                {tags && <TagList tags={tags}/>}
+                {/*{tags && <TagList tags={tags}/>}*/}
                 <p className={styles.bio}>{bio}</p>
             </div>
         </div>

@@ -1,16 +1,14 @@
-
-
+import styles from "../Authorization/auth.module.scss";
+import {authAPI} from "../Authorization/authApi";
 import {FieldValues, useForm} from "react-hook-form";
-import styles from "./register.module.scss"
-import {registerAPI} from "./registerApi";
+import {UserType} from "../../shared/types";
 import {useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
 
 
-function RegistrationPage() {
+function UserForm () {
 
-    const [authorizeUser, {}] = registerAPI.useAuthorizeUserMutation()
-    const navigate = useNavigate();
+    const [authorizeUser, {isLoading, error}] =
+        authAPI.useAuthorizeUserMutation()
 
     const {
         register,
@@ -20,68 +18,64 @@ function RegistrationPage() {
         getValues,
     } = useForm();
 
-    const onSubmit = async (data: FieldValues) => {
-        console.log(data)
-        navigate("/tagform")
-    }
+    const navigate = useNavigate();
 
+    const onSubmit = async (data: FieldValues) => {
+        console.log(data.email)
+        const newUser: UserType = {
+            email: data.email,
+            password: data.password
+        }
+        await authorizeUser(newUser);
+        navigate("/main")
+
+    }
 
     return (
         <div className={styles.container}>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-                <p className={styles.title}>Личная информация</p>
+                <p className={styles.title}>Дополнительная информация</p>
                 <input
-                    {...register("city", {
+                    {...register("birthday", {
                         required: "error",
                     })}
-                    placeholder="Город*"
+                    placeholder="Дата рождения*"
                     className={styles.input}
                 />
                 <input
-                    {...register("surname", {
+                    {...register("position", {
                         required: "error",
                     })}
-                    placeholder="Фамилия*"
+                    placeholder="Должность в команде*"
                     className={styles.input}
                 />
                 <input
-                    {...register("name", {
+                    {...register("pet", {
                         required: "error",
                     })}
-                    placeholder="Имя*"
+                    placeholder="Домашние животные*"
                     className={styles.input}
                 />
                 <input
-                    {...register("email", {
+                    {...register("view", {
                         required: "error",
                     })}
-                    placeholder="Электронная почта*"
+                    placeholder="Взгляды на жизнь*"
                     className={styles.input}
                 />
                 <input
-                    {...register("password", {
+                    {...register("bio", {
                         required: "error",
                     })}
                     //type="password"
-                    placeholder="Пароль*"
-                    className={styles.input}
-                />
-                <input
-                    {...register("confirmPassword", {
-                        required: "error",
-                        validate: (value) =>
-                            value === getValues("password") || "Пароли должны совпадать",
-                    })}
-                    //type="password"
-                    placeholder="Повторите пароль*"
+                    placeholder="Немного о себе*"
                     className={styles.input}
                 />
                 <div className={styles.footer}>
                     <button className={styles.button}
-
                             disabled={isSubmitting}
                             type="submit"
-                    >Продолжить</button>
+                    >Завершить</button>
                 </div>
 
             </form>
@@ -89,4 +83,4 @@ function RegistrationPage() {
     );
 }
 
-export default RegistrationPage;
+export default UserForm;

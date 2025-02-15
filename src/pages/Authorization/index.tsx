@@ -1,6 +1,6 @@
 import {FieldValues, useForm} from "react-hook-form";
 import {UserType} from "../../shared/types";
-import styles from "./style.module.scss"
+import styles from "./auth.module.scss"
 import {authAPI} from "./authApi";
 
 function AuthorizationPage() {
@@ -17,7 +17,7 @@ function AuthorizationPage() {
     } = useForm();
 
     const onSubmit = async (data: FieldValues) => {
-        console.log(data.email)
+        console.log(data)
         const newUser: UserType = {
             email: data.email,
             password: data.password
@@ -26,25 +26,33 @@ function AuthorizationPage() {
     }
 
     return (
-        <>
-            <p className={styles.btn}>Текст</p>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={styles.container}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+                <p className={styles.title}>Авторизация</p>
                 <input
                     {...register("email", {
                         required: "error",
                     })}
-                    placeholder="Почта"
+                    placeholder="Электронная почта*"
+                    className={styles.input}
                 />
                 <input
                     {...register("password", {
                         required: "error",
                     })}
                     //type="password"
-                    placeholder="Пароль"
+                    placeholder="Пароль*"
+                    className={styles.input}
                 />
-                <button>Отправить</button>
+                <div className={styles.footer}>
+                    <button className={styles.button}
+                            disabled={isSubmitting}
+                            type="submit"
+                    >Продолжить</button>
+                </div>
+
             </form>
-        </>
+        </div>
     );
 }
 

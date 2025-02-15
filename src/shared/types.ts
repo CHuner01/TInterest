@@ -19,8 +19,7 @@ export type UserType = {
 }
 
 export type TokensType = {
-    accessToken: string,
-    refreshToken: string
+    accessToken: string
 }
 
 export type ChatIconType = {
@@ -29,6 +28,7 @@ export type ChatIconType = {
     text: string,
     time: string,
     user: boolean,
+    userName: string,
     unread: boolean
 }
 

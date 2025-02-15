@@ -9,8 +9,12 @@ import SunIconLight from "../../app/icons/SunIconLight.png"
 import SunIconDark from "../../app/icons/SunIconDark.png"
 import MoonIconLight from "../../app/icons/MoonIconLight.png"
 import MoonIconDark from "../../app/icons/MoonIconDark.png"
+import TagList from "../../widgets/tag-list";
+import {userAPI} from "./userApi";
 
 function ProfilePage() {
+
+    const {data: users, error, isLoading} = userAPI.useGetUserInfoQuery(1)
 
     const {
         register,
@@ -50,6 +54,9 @@ function ProfilePage() {
     function edit() {
         setEditing(true);
     }
+
+    const tags = ["втоаытвл", "sfsdfasdf", "asdgasdv", "asdgasdc", "втоаытвл", "sfsdfasdf", "asdgasdv", "asdgasdc",
+    ]
 
     return (
         <>
@@ -94,6 +101,10 @@ function ProfilePage() {
                                 disabled={!editing}
                             />
                         </div>
+                    </div>
+
+                    <div className={styles.tags}>
+                        {tags && <TagList tags={tags}/>}
                     </div>
 
                     <input

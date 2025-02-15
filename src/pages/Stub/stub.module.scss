@@ -1,0 +1,254 @@
+.navbarContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    height: 60px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 970px;
+    min-width: 250px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+}
+
+.titleT {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    color: #ffd600;
+    font-size: 27px;
+    margin: 0;
+}
+
+.titleIntererst {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    color: #383838;
+    font-size: 27px;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.lkText {
+    color: blue;
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    box-sizing: border-box;
+    padding: 45px;
+    background-color: #f6f7f9;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    gap: 30px;
+}
+
+.list {
+    width: 100%;
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.bigTitleT {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    color: #ffd600;
+    font-size: 63px;
+    margin: 0;
+}
+
+.bigTitleIntererst {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    color: #383838;
+    font-size: 63px;
+    margin: 0;
+}
+
+.centerText {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    color: #383838;
+    text-align: center;
+}
+
+.pcIcon {
+    width: 530px;
+    height: 380px;
+}
+
+
+@media all and (max-width: 700px) {
+    .pcIcon {
+        width: 350px;
+        height: 250px;
+    }
+
+}
+
+p {
+    margin: 7px 0;
+}
+
+.title2 {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    color: #383838;
+
+    margin-top: 40px;
+}
+
+.title3 {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+
+    color: #383838;
+}
+
+.text {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+
+    color: #383838;
+}
+
+.whiteBox {
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px;
+    background-color: var(--bg-input-light);
+
+    color: var(--bg-gray-light);
+    padding: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.whiteBoxIcon {
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px;
+    background-color: var(--bg-input-light);
+
+    color: var(--bg-gray-light);
+    padding: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.paragraph {
+    max-width: 65%;
+}
+
+.boxRow {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+
+}
+
+@media all and (max-width: 700px) {
+    .boxRow {
+        flex-direction: column;
+
+    }
+    .whiteBox {
+        max-width: 100%;
+    }
+}
+
+
+
+
+.whiteBoxSmall {
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px;
+    background-color: var(--bg-input-light);
+
+    color: var(--bg-gray-light);
+    padding: 18px;
+
+    max-width: 520px;
+    width: 100%;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.yellowBox {
+    border: 1px;
+    border-radius: 10px ;
+    height: 50px;
+    width: 50px;
+    background-color: #ffd600;
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    font-size: 27px;
+    color: black;
+
+}
+
+@media all and (max-width: 700px) {
+    .yellowBox {
+        display: none;
+    }
+}
+
+.yellowRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+
+.button {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    background-color: #ffd600;
+    color: #383838;
+    width: 190px;
+    height: 50px;
+    border: 1px;
+    border-radius: 10px ;
+    cursor: pointer;
+}
+

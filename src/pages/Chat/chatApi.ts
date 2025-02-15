@@ -11,8 +11,15 @@ export const chatAPI = createApi({
     endpoints: (build) => ({
         getMessages: build.query<MessageType[], number>({
             query: (id) => ({
-                url: "/users/all"
+                url: "chat/" + id.toString() + "messages"
             })
-        })
+        }),
+        editUserInfo: build.mutation<UserInfoType, UserInfoType>({
+            query: (newUserInfo) => ({
+                url: "/chat/message",
+                method: 'PUT',
+                body: newUserInfo
+            })
+        }),
     })
 })

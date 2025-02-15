@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    padding: 20px;
+    background-color: var(--bg-white-light);
+}
+
+.form {
+    width: 100%;
+    max-width: 400px;
+    min-width: 250px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+    padding: 40px;
+    border: 3px solid #ffd600;
+    border-radius: 30px;
+}
+
+@media all and (max-width: 530px) {
+    .form {
+        padding: 20px;
+    }
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    gap: 10px;
+}
+@media (max-width: 420px) {
+    .list {
+        grid-template-columns: 1fr;
+    }
+     /* Один столбец при маленьком экране */
+}
+
+
+.tag {
+    display: flex;
+    flex-direction: row;
+    margin: 7px;
+
+    gap: 15px;
+}
+
+@media (max-width: 420px) {
+    .tag {
+        justify-content: center;
+    }
+}
+
+.name {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    appearance: none; /* Убираем стандартный стиль */
+    width: 28px;
+    height: 28px;
+    background-color: #dcd6d6; /* Желтый фон */
+    border-radius: 30%; /* Делаем круг */
+    border: 1px solid white; /* Черная обводка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    //transition: all 0.3s ease;
+
+    &:checked {
+        background-color: yellow; /* Желтый цвет сохраняется */
+        position: relative;
+        border: 1px solid yellow;
+    }
+
+    &:checked::after {
+        content: "✔"; /* Добавляем галочку */
+        font-size: 21px;
+        color: black; /* Черный цвет галочки */
+        font-weight: bold;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 25px;
+    margin-top: auto;
+}
+
+.text {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    max-width: 60%;
+}
+
+.button {
+    font-family: 'MyFont', sans-serif;
+    font-weight: 300;
+    background-color: #ffd600;
+    color: #383838;
+    width: 110px;
+    height: 40px;
+    border: 1px;
+    border-radius: 10px ;
+    cursor: pointer;
+}

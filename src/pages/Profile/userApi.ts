@@ -7,9 +7,9 @@ export const userAPI = createApi({
         //baseUrl: API_URL
     }),
     endpoints: (build) => ({
-        getUserInfo: build.query<UserInfoType, void>({
-            query: () => ({
-                url: fakeApi,
+        getUserInfo: build.query<UserInfoType, number>({
+            query: (id) => ({
+                url: "/users/" + id.toString(),
             })
         }),
         editUserInfo: build.mutation<UserInfoType, UserInfoType>({

@@ -1,15 +1,17 @@
 import LKIcon from "../../app/icons/LKIcon.png";
 import MsgIcon from "../../app/icons/MsgIcon.png";
 import styles from "./navbar.module.scss"
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 function Navbar() {
+
+    const navigate = useNavigate()
 
     return (
         <>
             <nav className={styles.container}>
                 <div className={styles.nav}>
-                    <div className={styles.title}>
+                    <div className={styles.title} onClick={() => navigate("/main")}>
                         <p className={styles.titleT}>T</p>
                         <p className={styles.titleIntererst}>Interest</p>
                     </div>

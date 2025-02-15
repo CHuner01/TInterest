@@ -25,6 +25,15 @@ p {
     background-color: #ffd600;
     flex-shrink: 0;
     border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    color: white;
 }
 
 .info {
@@ -60,6 +69,15 @@ p {
     background-color: #ffd600;
     flex-shrink: 0;
     border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'MyFont', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
 }
 
 .text {

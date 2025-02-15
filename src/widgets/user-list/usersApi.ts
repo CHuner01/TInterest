@@ -9,12 +9,12 @@ export const usersAPI = createApi({
         baseUrl: API_URL
     }),
     endpoints: (build) => ({
-        getSameUsers: build.query<any[], void>({
-            query: () => ({
-                url: "/users/all"
+        getSameUsers: build.query<UserInfoType[], number>({
+            query: (id) => ({
+                url: "/recomendations/user/" + id.toString()
             })
         }),
-        getUserTags: build.query<string[], number>({
+        getUserTags: build.query<UserInfoType[], number>({
             query: (id) => ({
                 url: "/users/tag/" + id.toString()
             })

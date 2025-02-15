@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import StubPage from "../pages/Stub";
 import ProfilePage from "../pages/Profile";
 import Chat from "../pages/Chat";
+import TagForm from "../pages/TagForm";
+import UserForm from "../pages/UserForm";
 
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
                     <Route path="/profile" element={<ProfilePage />} />
                     <Route path="/chats" element={<ChatList />} />
                     <Route path="/chats/:id" element={<Chat />} />
+                    <Route path="/tagform" element={<TagForm />} />
+                    <Route path="/userform" element={<UserForm />} />
                 </Routes>
             </Router>
         </>

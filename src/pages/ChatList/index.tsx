@@ -19,6 +19,7 @@ function ChatList() {
             text:"Пошли пить молоко",
             time:"30м",
             user: true,
+            userName: "Кто",
             unread: true,
         },
         {
@@ -27,6 +28,7 @@ function ChatList() {
             text:"Пошли пить молоко",
             time:"30м",
             user: false,
+            userName: "Кто",
             unread: false,
         }]
 
@@ -44,6 +46,7 @@ function ChatList() {
                                 name={chat.name}
                                 text={chat.text}
                                 time={chat.time}
+                                userName={chat.userName}
                                 user={chat.user}
                                 unread={chat.unread}
                             />
