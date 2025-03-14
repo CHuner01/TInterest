@@ -55,7 +55,7 @@ function ProfilePage() {
         setEditing(true);
     }
 
-    const tags = ["втоаытвл", "sfsdfasdf", "asdgasdv", "asdgasdc", "втоаытвл", "sfsdfasdf", "asdgasdv", "asdgasdc",
+    const tags = ["интерес", "интерес", "интерес", "интерес", "интерес", "интерес", "интерес", "интерес",
     ]
 
     return (

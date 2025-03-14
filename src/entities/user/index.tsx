@@ -8,6 +8,7 @@ export default function User({id, name, city, position, bio}: UserInfoType) {
     const {data: tags, error, isLoading} =
         usersAPI.useGetUserTagsQuery(id)
 
+
     return (
         <div className={styles.container}>
             <div className={styles.photo}>{name[0]}</div>

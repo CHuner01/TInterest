@@ -26,7 +26,7 @@ function UserForm () {
             email: data.email,
             password: data.password
         }
-        await authorizeUser(newUser);
+        // await authorizeUser(newUser);
         navigate("/main")
 
     }

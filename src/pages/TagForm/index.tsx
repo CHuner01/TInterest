@@ -9,31 +9,31 @@ function TagForm() {
 
     const tags = [{
         id: 0,
-        name: "что"
+        name: "Программирование"
     },{
         id: 1,
-        name: "что"
+        name: "Садоводство"
     },{
         id: 2,
-        name: "что"
+        name: "Футбол"
     },{
-        id: 2,
-        name: "что"
+        id: 3,
+        name: "Аниме"
     },{
-        id: 2,
-        name: "что"
+        id: 4,
+        name: "Сериалы"
     },{
-        id: 2,
-        name: "что"
+        id: 5,
+        name: "Охота"
     },{
-        id: 2,
-        name: "что"
+        id: 6,
+        name: "Рыбалка"
     },{
-        id: 2,
-        name: "что"
+        id: 7,
+        name: "Игры"
     },{
-        id: 2,
-        name: "что"
+        id: 8,
+        name: "Туризм"
     }]
 
     const {

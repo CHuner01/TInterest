@@ -2,6 +2,7 @@ import {FieldValues, useForm} from "react-hook-form";
 import {UserType} from "../../shared/types";
 import styles from "./auth.module.scss"
 import {authAPI} from "./authApi";
+import {useNavigate} from "react-router-dom";
 
 function AuthorizationPage() {
 
@@ -16,13 +17,16 @@ function AuthorizationPage() {
         getValues,
     } = useForm();
 
+    const navigate = useNavigate();
+
     const onSubmit = async (data: FieldValues) => {
         console.log(data)
         const newUser: UserType = {
             email: data.email,
             password: data.password
         }
-        await authorizeUser(newUser)
+        // await authorizeUser(newUser)
+        navigate("/main")
     }
 
     return (
